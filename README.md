@@ -8,3 +8,5 @@ Generate a OAuth API Token here: [Lichess API Access Token Request](https://lich
 Download the repo
 
 Paste the token inside of the '' in the .env file
+
+Run CKQTournamentSetup.py
