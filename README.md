@@ -1,5 +1,5 @@
 # Lichess Tournament Automation Tool
-A python automation tool that remotely sets up chess tournaments via Lichess API
+A java automation tool that remotely sets up chess tournaments via Lichess API
 
 ### Usage
 
@@ -9,4 +9,6 @@ Download the repo
 
 Paste the token inside of the '' in the .env file
 
-Run CKQTournamentSetup.py
+Run TournamentSetup.java
+
+This tool was originaly written in python. However, the python client for the LichessAPI was missing a geat deal of documentation rendering the tool incomplete. The Java client has significantly better documentation, allowing this tool to be completed.
