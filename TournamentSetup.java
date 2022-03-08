@@ -1,11 +1,8 @@
 import java.time.*; 
-import io.github.cdimascio.dotenv.Dotenv;
 
 class TournamentSetup {
     public static void main(String[] args) {
 
-        Dotenv env = Dotenv.load();
-        String myToken = env.get("LICHESS_TOKEN");
         String token = "";
         String team = "kings--queens-chess-academy";
         String stringTime;
@@ -14,9 +11,6 @@ class TournamentSetup {
 
         
         System.out.println(myToken);
-
-        /*
-
 
         stringTime = LocalDateTime.now().toString().substring(0, 11) + "23:30:00.000Z";
         initialtime = ZonedDateTime.parse(stringTime);
@@ -45,7 +39,5 @@ class TournamentSetup {
         }
 
         System.out.println("Tournaments Successfully Created");
-
-        */
     }
 }
