@@ -18,3 +18,5 @@ C:/"Program Files"/Java/jdk-17.0.2/bin/java -p . --add-modules chariot Tournamen
 ```
 
 This tool was originaly written in python. However, the python client for the LichessAPI was missing a geat deal of documentation rendering the tool incomplete. The Java client has significantly better documentation, allowing this tool to be completed.
+
+Special thanks to Tors, the developer of the Java Client, for helping me out with the syntax.
