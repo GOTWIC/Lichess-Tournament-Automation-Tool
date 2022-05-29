@@ -1,30 +1,32 @@
+// Created by Swagnik Roychoudhury for Chess Kings and Queens Academy
+
 import java.time.*; 
 
 class TournamentSetup {
     public static void main(String[] args) {
 
-        String token = "lip_C9wjulgnvHqQq6kXegww";
+        String token = "";
         String team = "kings--queens-chess-academy";
         String stringTime;
         ZonedDateTime initialtime;
         ZonedDateTime time;
 
-        int offset = 1;
-        int days = 10;
+        int dayOffset = 1;
+        int numOfTournaments = 10;
 
         stringTime = LocalDateTime.now().toString().substring(0, 11) + "22:30:00.000Z";
         initialtime = ZonedDateTime.parse(stringTime);
 
         var client = chariot.Client.auth(token);
 
-        for(int i = 0; i < days; i++){
+        for(int i = 0; i < numOfTournaments; i++){
             String name;
             if(i%2 == 0)
                 name = "Pawn 1 and Pawn 2";
             else
                 name = "Pawn 3 and Knight";
             
-            time = initialtime.plusDays(i/2 + offset);
+            time = initialtime.plusDays(i/2 + dayOffset);
                 
             final ZonedDateTime finalTime = time;
 
