@@ -3,28 +3,28 @@ import java.time.*;
 class TournamentSetup {
     public static void main(String[] args) {
 
-        String token = "";
+        String token = "lip_C9wjulgnvHqQq6kXegww";
         String team = "kings--queens-chess-academy";
         String stringTime;
         ZonedDateTime initialtime;
         ZonedDateTime time;
 
-        
-        System.out.println(myToken);
+        int offset = 1;
+        int days = 10;
 
-        stringTime = LocalDateTime.now().toString().substring(0, 11) + "23:30:00.000Z";
+        stringTime = LocalDateTime.now().toString().substring(0, 11) + "22:30:00.000Z";
         initialtime = ZonedDateTime.parse(stringTime);
 
         var client = chariot.Client.auth(token);
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < days; i++){
             String name;
             if(i%2 == 0)
                 name = "Pawn 1 and Pawn 2";
             else
                 name = "Pawn 3 and Knight";
             
-            time = initialtime.plusDays(i/2);
+            time = initialtime.plusDays(i/2 + offset);
                 
             final ZonedDateTime finalTime = time;
 
@@ -36,8 +36,15 @@ class TournamentSetup {
                     .conditionTeam(team)
                     .berserkable(false)
                     .startTime(s -> s.atDate(finalTime)));
+
+            System.out.println("Working...");
         }
 
         System.out.println("Tournaments Successfully Created");
     }
 }
+
+
+
+
+// To Run: C:/"Program Files"/Java/jdk-17.0.2/bin/java -p . --add-modules chariot TournamentSetup.java
